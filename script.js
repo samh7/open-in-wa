@@ -9,3 +9,11 @@ openButton.addEventListener("click", function () {
     }
   }
 });
+
+phoneNumber.addEventListener("input", function () {
+  const phoneNumberLen = this.value.length;
+  this.style.outline = "rgba(0, 0, 0, 0)";
+  if (document.hasFocus() && Number(phoneNumberLen) === 10) {
+    this.style.outline = "4px solid #15803d";
+  }
+});
